@@ -2,15 +2,34 @@
 
 A highly customizable crosshair overlay for Windows controlled via a local web interface.
 
+
+
+
+**Presets GIF crosshairs:**
+
+![crosshair169](https://github.com/user-attachments/assets/e94fdaa7-0c45-453e-9e53-12b7d8451304)
+![crosshair175](https://github.com/user-attachments/assets/5dedcca2-a125-490b-a8d3-4d0fa112b756)
+![crosshair914](https://github.com/user-attachments/assets/e90e122f-60be-4c5c-9d78-eb1349c0f37b)
+![crosshair683](https://github.com/user-attachments/assets/3527ddf8-7799-4956-8dc8-217f55f5b0fe)
+![crosshair808](https://github.com/user-attachments/assets/fda5f26f-7003-4701-8d4f-1c72252cb874)
+![crosshair639](https://github.com/user-attachments/assets/5958f8fd-f8d5-4603-9471-786d6fb45ba0)
+![crosshair629](https://github.com/user-attachments/assets/69c6839d-bb4d-45aa-ac26-701962d92ec4)
+![crosshair679](https://github.com/user-attachments/assets/bd184951-7f10-423a-b42b-7af0f2815a09)
+![crosshair506](https://github.com/user-attachments/assets/d7c7ee3d-98ce-46b1-ab85-e2568676ebff)
+![crosshair310](https://github.com/user-attachments/assets/147e3d85-87b1-497d-a88a-5944040bdd06)
+
+
+
 ![Screenshot_12-4-2025_35831_127 0 0 1](https://github.com/user-attachments/assets/26be16a2-4c99-4708-b7f6-7e2bfc8e4420)
 ![image](https://github.com/user-attachments/assets/5a8ed611-fec0-48c1-9548-01cbbd36e61e)
-![image](https://github.com/user-attachments/assets/b759f36d-b0ea-446b-a44e-a8948ce9da87)
 ![image](https://github.com/user-attachments/assets/6121dd6e-51e2-471f-b236-a7d697b1d04d)
-![image](https://github.com/user-attachments/assets/fa37d301-8119-41a5-a4b7-6b4e927b612c)
 ![image](https://github.com/user-attachments/assets/12019bfe-7cd4-47d0-a36e-33cc66a2a2a0)
 
-Sample GIF crosshairs:
-![crosshair169](https://github.com/user-attachments/assets/e94fdaa7-0c45-453e-9e53-12b7d8451304)![crosshair175](https://github.com/user-attachments/assets/5dedcca2-a125-490b-a8d3-4d0fa112b756)![crosshair914](https://github.com/user-attachments/assets/e90e122f-60be-4c5c-9d78-eb1349c0f37b)![crosshair683](https://github.com/user-attachments/assets/3527ddf8-7799-4956-8dc8-217f55f5b0fe)
+
+
+
+
+
 
 
 ## Features
