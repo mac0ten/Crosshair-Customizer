@@ -1,8 +1,17 @@
 # Crosshair Tool
 
-![App Screenshot](placeholder.png) <!-- Optional: Add a screenshot -->
+A highly customizable crosshair overlay for Windows controlled via a local web interface.
 
-A highly customizable crosshair overlay for Windows, macOS, and Linux, controlled via a local web interface.
+![Screenshot_12-4-2025_35831_127 0 0 1](https://github.com/user-attachments/assets/26be16a2-4c99-4708-b7f6-7e2bfc8e4420)
+![image](https://github.com/user-attachments/assets/5a8ed611-fec0-48c1-9548-01cbbd36e61e)
+![image](https://github.com/user-attachments/assets/b759f36d-b0ea-446b-a44e-a8948ce9da87)
+![image](https://github.com/user-attachments/assets/6121dd6e-51e2-471f-b236-a7d697b1d04d)
+![image](https://github.com/user-attachments/assets/fa37d301-8119-41a5-a4b7-6b4e927b612c)
+![image](https://github.com/user-attachments/assets/12019bfe-7cd4-47d0-a36e-33cc66a2a2a0)
+
+Sample GIF crosshairs:
+![crosshair169](https://github.com/user-attachments/assets/e94fdaa7-0c45-453e-9e53-12b7d8451304)![crosshair175](https://github.com/user-attachments/assets/5dedcca2-a125-490b-a8d3-4d0fa112b756)![crosshair914](https://github.com/user-attachments/assets/e90e122f-60be-4c5c-9d78-eb1349c0f37b)![crosshair683](https://github.com/user-attachments/assets/3527ddf8-7799-4956-8dc8-217f55f5b0fe)
+
 
 ## Features
 
@@ -50,7 +59,7 @@ These two parts communicate internally to provide real-time updates.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/CrosshairTool.git # Replace with your repo URL
+    git clone https://github.com/mac0ten/Crosshair-Customizer/
     cd CrosshairTool
     ```
 2.  **Create a virtual environment (recommended):**
@@ -107,7 +116,3 @@ If you want to build the executable yourself:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues.
-
-## License
-
-[Specify your chosen license here, e.g., MIT License] 
