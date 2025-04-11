@@ -1,0 +1,37 @@
+{
+    "type": "animated",
+    "parametric": {
+        "center_dot_enabled": true,
+        "center_dot_color": "#ff0000",
+        "center_dot_size": 2,
+        "center_dot_opacity": 255,
+        "inner_lines_enabled": true,
+        "inner_lines_color": "#ffffff",
+        "inner_lines_thickness": 1,
+        "inner_lines_length": 5,
+        "inner_lines_gap": 5,
+        "inner_lines_opacity": 255,
+        "outer_lines_enabled": false,
+        "outer_lines_color": "#00FF00",
+        "outer_lines_thickness": 1,
+        "outer_lines_length": 2,
+        "outer_lines_gap": 8,
+        "outer_lines_opacity": 180,
+        "outline_enabled": false,
+        "outline_color": "#000000",
+        "outline_thickness": 4,
+        "outline_opacity": 150,
+        "t_shape": true
+    },
+    "static": {
+        "image_path": null,
+        "opacity": 255,
+        "scale": 0.1
+    },
+    "animated": {
+        "gif_path": "tagmite_test.gif",
+        "opacity": 255,
+        "scale": 0.1,
+        "speed": 100
+    }
+}

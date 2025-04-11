@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosshair Customizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Crosshair Customizer</h1>
+            <div class="theme-toggle-wrapper">
+                <span class="theme-label">Theme</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Status Message Area -->
+            <div id="statusMessages" class="status-area" role="status" aria-live="polite"></div>
+            
+            <!-- Crosshair Type Selection -->
+            <div id="crosshairTypeCard" class="card">
+                <div class="card-header">
+                    <h2>Crosshair Type</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <select id="crosshairType" class="form-select">
+                            <option value="parametric">Parametric Crosshair</option>
+                            <option value="static">Static Image</option>
+                            <option value="animated">Animated GIF</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parametric Controls -->
+            <div id="parametricControls" class="card">
+                <div class="card-header">
+                    <h2>Parametric Settings</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Center Dot Section -->
+                    <div class="form-group">
+                        <label class="form-check">
+                            <input type="checkbox" id="centerDotEnabled" class="form-check-input">
+                            <span class="form-check-label">Center Dot</span>
+                        </label>
+                        
+                        <div class="d-flex gap-3 flex-wrap">
+                            <div class="color-picker-wrapper">
+                                <input type="color" id="centerDotColor" class="color-picker">
+                                <span class="color-label">Color</span>
+                            </div>
+                            
+                            <div>
+                                <label for="centerDotSize" class="form-label">Size</label>
+                                <input type="number" id="centerDotSize" min="1" class="number-input">
+                            </div>
+                        </div>
+                        
+                        <div class="range-wrapper">
+                            <div class="range-value-label">
+                                <label for="centerDotOpacity">Opacity</label>
+                                <span id="centerDotOpacityValue" class="range-value-text">200</span>
+                            </div>
+                            <div class="range-controls">
+                                <input type="range" id="centerDotOpacity" min="0" max="255" class="range-slider">
+                                <div id="centerDotOpacityValue" class="range-value">200</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <!-- Inner Lines Section -->
+                    <div class="form-group">
+                        <label class="form-check">
+                            <input type="checkbox" id="innerLinesEnabled" class="form-check-input">
+                            <span class="form-check-label">Inner Lines</span>
+                        </label>
+                        
+                        <div class="d-flex gap-3 flex-wrap">
+                            <div class="color-picker-wrapper">
+                                <input type="color" id="innerLinesColor" class="color-picker">
+                                <span class="color-label">Color</span>
+                            </div>
+                            
+                            <div>
+                                <label for="innerLinesThickness" class="form-label">Thickness</label>
+                                <input type="number" id="innerLinesThickness" min="0" class="number-input">
+                            </div>
+                            
+                            <div>
+                                <label for="innerLinesLength" class="form-label">Length</label>
+                                <input type="number" id="innerLinesLength" min="0" class="number-input">
+                            </div>
+                            
+                            <div>
+                                <label for="innerLinesGap" class="form-label">Gap</label>
+                                <input type="number" id="innerLinesGap" min="0" class="number-input">
+                            </div>
+                        </div>
+                        
+                        <div class="range-wrapper">
+                            <div class="range-value-label">
+                                <label for="innerLinesOpacity">Opacity</label>
+                                <span id="innerLinesOpacityValue" class="range-value-text">255</span>
+                            </div>
+                            <div class="range-controls">
+                                <input type="range" id="innerLinesOpacity" min="0" max="255" class="range-slider">
+                                <div id="innerLinesOpacityValue" class="range-value">255</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <!-- Outline Section -->
+                    <div class="form-group">
+                        <label class="form-check">
+                            <input type="checkbox" id="outlineEnabled" class="form-check-input">
+                            <span class="form-check-label">Outline</span>
+                        </label>
+                        
+                        <div class="d-flex gap-3 flex-wrap">
+                            <div class="color-picker-wrapper">
+                                <input type="color" id="outlineColor" class="color-picker">
+                                <span class="color-label">Color</span>
+                            </div>
+                            
+                            <div>
+                                <label for="outlineThickness" class="form-label">Thickness</label>
+                                <input type="number" id="outlineThickness" min="0" class="number-input">
+                            </div>
+                        </div>
+                        
+                        <div class="range-wrapper">
+                            <div class="range-value-label">
+                                <label for="outlineOpacity">Opacity</label>
+                                <span id="outlineOpacityValue" class="range-value-text">150</span>
+                            </div>
+                            <div class="range-controls">
+                                <input type="range" id="outlineOpacity" min="0" max="255" class="range-slider">
+                                <div id="outlineOpacityValue" class="range-value">150</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <!-- T-Shape Option -->
+                    <div class="form-group">
+                        <label class="form-check">
+                            <input type="checkbox" id="tShape" class="form-check-input">
+                            <span class="form-check-label">T-Shape (No Top Line)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image/GIF Controls -->
+            <div id="imageControls" class="card">
+                <div class="card-header">
+                    <h2>Image/GIF Settings</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Preset Selector for Animated GIFs - only shown when animated type is selected -->
+                    <div id="gifPresetControl" class="form-group" style="display: none;">
+                        <label class="form-label">GIF Presets</label>
+                        <div id="gifPresetGrid" class="preset-grid"></div>
+                        <!-- Pagination Controls -->
+                        <div id="presetPagination" class="pagination-controls">
+                            <button id="presetPrevBtn" class="btn btn-secondary btn-sm">Previous</button>
+                            <span id="presetPageInfo">Page 1 of 1</span>
+                            <button id="presetNextBtn" class="btn btn-secondary btn-sm">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group file-input-wrapper">
+                        <label for="imageUpload" class="file-input-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            Upload Image/GIF
+                        </label>
+                        <input type="file" id="imageUpload" class="file-input" accept=".png,.jpg,.jpeg,.gif,.bmp">
+                    </div>
+                    
+                    <div class="preview-area">
+                        <div class="preview-info">
+                            <p>Current file:</p>
+                            <p class="preview-filename" id="currentFileName">None</p>
+                        </div>
+                        <img id="imagePreview" src="" alt="Image Preview" class="preview-image" style="display: none;">
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="form-group">
+                        <div class="range-wrapper">
+                            <div class="range-value-label">
+                                <label for="imageOpacity">Opacity</label>
+                                <span id="imageOpacityValue" class="range-value-text">255</span>
+                            </div>
+                            <div class="range-controls">
+                                <input type="range" id="imageOpacity" min="0" max="255" class="range-slider">
+                                <div id="imageOpacityValue" class="range-value">255</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="imageScale" class="form-label">Scale</label>
+                        <input type="number" id="imageScale" min="0.01" step="0.1" value="1.0" class="number-input">
+                    </div>
+                    
+                    <div id="gifSpeedControl" class="form-group" style="display: none;">
+                        <label for="gifSpeed" class="form-label">GIF Speed (%)</label>
+                        <input type="number" id="gifSpeed" min="1" value="100" class="number-input">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Management -->
+            <div id="profileCard" class="card">
+                <div class="card-header">
+                    <h2>Profiles</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="profileName" class="form-label">Save Current Settings</label>
+                        <div class="d-flex gap-3">
+                            <input type="text" id="profileName" placeholder="Profile name" class="form-control">
+                            <button id="saveProfileBtn" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="form-group">
+                        <label for="profileList" class="form-label">Manage Profiles</label>
+                        <div class="d-flex gap-3">
+                            <select id="profileList" class="form-select">
+                                <!-- Options will be populated by JS -->
+                            </select>
+                            <div class="btn-group">
+                                <button id="loadProfileBtn" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    Load
+                                </button>
+                                <button id="deleteProfileBtn" class="btn btn-danger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating mobile quick navigation -->
+    <button id="mobileQuickNav" class="mobile-fab" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
