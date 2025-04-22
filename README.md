@@ -22,8 +22,7 @@ A highly customizable crosshair overlay for Windows controlled via a local web i
 
 ![Screenshot_12-4-2025_35831_127 0 0 1](https://github.com/user-attachments/assets/26be16a2-4c99-4708-b7f6-7e2bfc8e4420)
 ![image](https://github.com/user-attachments/assets/5a8ed611-fec0-48c1-9548-01cbbd36e61e)
-![image](https://github.com/user-attachments/assets/6121dd6e-51e2-471f-b236-a7d697b1d04d)
-![image](https://github.com/user-attachments/assets/12019bfe-7cd4-47d0-a36e-33cc66a2a2a0)
+![image](https://github.com/user-attachments/assets/6121dd6e-51e2-471f-b236-a7d697b1d04d)![image](https://github.com/user-attachments/assets/12019bfe-7cd4-47d0-a36e-33cc66a2a2a0)
 
 
 
